@@ -13,7 +13,9 @@ version: 1.0.0
 inspec_version: "> 3.0"
 #We support only unix flavours and windows.
 supports:
-  - platform-family: linux
+  - platform-family: unix
+  - platform-family: windows
+
 attributes:
   - name: IIS_HOME
     type: string
