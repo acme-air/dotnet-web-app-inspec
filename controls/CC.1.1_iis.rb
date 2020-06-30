@@ -10,7 +10,7 @@ control "IIS Compliance Check 1.1 " do
   domain_home = attribute('IIS_HOME')
 
   # Check for the existence of the daily log file, and its permissions
-  describe directory('/tmp1') do
+  describe directory('/tmp') do
     it { should exist }
   end
 
