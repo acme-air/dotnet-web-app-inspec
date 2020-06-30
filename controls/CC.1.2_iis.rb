@@ -10,8 +10,7 @@ control "IIS Compliance Check 1.2" do
   domain_home = attribute('IIS_HOME')
 
   # Check for the existence of service
-  describe service('iptables') do
-    it { should be_installed }
-    it { should be_running }
+  describe directory('/tmp') do
+    it { should exist }
   end
 end
