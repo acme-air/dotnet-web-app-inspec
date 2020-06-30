@@ -1,0 +1,20 @@
+name: profile-iis
+title: InSpec Profile For IIS Webserver Compliance rules
+maintainer: IBM Global Technology Services.
+copyright: IBM.
+copyright_email: support@in.ibm.com
+license: Proprietary, All rights reserved.
+summary: Profile to check 2 rules for IIS Server, as part of PoC.
+description: One profile to cover all the controls relating to IIS.
+
+version: 1.0.0
+#Since we have tested this profile with v3.0.61, we can safely assume to run
+#with a version above that.
+inspec_version: "> 3.0"
+#We support only unix flavours and windows.
+supports:
+  - platform-family: linux
+attributes:
+  - name: IIS_HOME
+    type: string
+    value: /tech/appl/iis
