@@ -10,7 +10,7 @@ WORKDIR /src
 COPY NetCoreDockerTest/NetCoreDockerTest.csproj NetCoreDockerTest/
 RUN dotnet restore "NetCoreDockerTest/NetCoreDockerTest.csproj"
 COPY . .
-WORKDIR "/src/NetCoreDockerTest"
+WORKDIR /src/NetCoreDockerTest
 RUN dotnet build "NetCoreDockerTest.csproj" -c Release -o /app/build
 
 FROM build AS publish
